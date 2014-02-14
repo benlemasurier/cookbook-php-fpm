@@ -33,3 +33,4 @@ default['php-fpm']['pools'] = [
     :name => "www"
   }
 ]
+default['php-fpm']['dotdeb']['distribution'] = 'wheezy-php55'

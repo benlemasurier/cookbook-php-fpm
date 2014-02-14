@@ -55,7 +55,7 @@ when 'debian'
   elsif node.platform_version.to_f >= 7.0
     apt_repository "dotdeb" do
       uri "http://packages.dotdeb.org"
-      distribution "stable"
+      distribution node['php-fpm']['dotdeb']['distribution'] || "stable"
       components ['all']
       key "http://www.dotdeb.org/dotdeb.gpg"
       action :add
